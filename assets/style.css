@@ -135,8 +135,8 @@ p.corpo {
 }
 
 .hero--home { height: 67.5vw; max-height: 900px; min-height: 420px; }
-.hero--musica { aspect-ratio: 16 / 9.6; max-height: 624px; }
-.hero--obra { aspect-ratio: 16 / 12; max-height: 672px; margin-top: 32px; }
+.hero--musica { height: 67.5vw; max-height: 900px; min-height: 420px; }
+.hero--obra { height: 75vw; max-height: 900px; min-height: 420px; margin-top: 32px; }
 
 .hero__img {
   position: absolute;
@@ -513,8 +513,8 @@ p.corpo {
   .section { padding-top: 36px; }
 
   .hero--home { height: 125vw; max-height: 900px; min-height: 0; }
-  .hero--musica { aspect-ratio: 4 / 4.2; }
-  .hero--obra { aspect-ratio: 4 / 3.6; margin-top: 24px; }
+  .hero--musica { height: 105vw; max-height: 900px; min-height: 0; }
+  .hero--obra { height: 90vw; max-height: 900px; min-height: 0; margin-top: 24px; }
 
   .hero__texto { padding-bottom: 32px; }
   .carrossel__slide .hero__texto { padding-bottom: 52px; }
