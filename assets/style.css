@@ -134,20 +134,20 @@ p.corpo {
   margin-top: 8px;
 }
 
-.hero--home { aspect-ratio: 16 / 10.8; max-height: 744px; }
+.hero--home { height: 67.5vw; max-height: 900px; min-height: 420px; }
 .hero--musica { aspect-ratio: 16 / 9.6; max-height: 624px; }
 .hero--obra { aspect-ratio: 16 / 12; max-height: 672px; margin-top: 32px; }
 
 .hero__img {
   position: absolute;
-  inset: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   background-size: cover;
   background-position: center;
 }
 
 .hero__veu {
   position: absolute;
-  inset: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   background: linear-gradient(0deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.15) 55%, rgba(0,0,0,0.05) 100%);
 }
 
@@ -196,9 +196,9 @@ p.corpo {
 .carrossel { margin-top: 8px; }
 
 .carrossel__trilho {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
   display: flex;
-  width: 100%;
-  height: 100%;
   transition: transform 0.7s ease;
 }
 
@@ -512,7 +512,7 @@ p.corpo {
 
   .section { padding-top: 36px; }
 
-  .hero--home { aspect-ratio: 4 / 5; }
+  .hero--home { height: 125vw; max-height: 900px; min-height: 0; }
   .hero--musica { aspect-ratio: 4 / 4.2; }
   .hero--obra { aspect-ratio: 4 / 3.6; margin-top: 24px; }
 
