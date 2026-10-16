@@ -134,7 +134,7 @@ p.corpo {
   margin-top: 8px;
 }
 
-.hero--home { aspect-ratio: 16 / 10.8; max-height: 744px; }
+.hero--home { aspect-ratio: 16 / 10.8; max-height: min(744px, calc(100svh - 210px)); min-height: 380px; }
 .hero--musica { aspect-ratio: 16 / 9.6; max-height: 624px; }
 .hero--obra { aspect-ratio: 16 / 12; max-height: 672px; margin-top: 32px; }
 
@@ -212,7 +212,8 @@ p.corpo {
   background-position: center;
 }
 
-.carrossel__slide .hero__texto { padding-bottom: 64px; }
+.carrossel__slide .hero__texto { padding-bottom: 64px; max-width: 820px; }
+.carrossel__slide .hero__desc { max-width: 560px; }
 
 .seta {
   position: absolute;
