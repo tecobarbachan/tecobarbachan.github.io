@@ -1,61 +1,66 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>André Barbachan — Artista visual, músico e pesquisador</title>
-<meta name="description" content="Site de André Barbachan — artista visual, músico e pesquisador. Instalações e objetos interativos que cruzam som, eletrônica e reaproveitamento de materiais descartados.">
+<title>André Barbachan — Visual artist, musician and researcher</title>
+<meta name="description" content="Website of André Barbachan — visual artist, musician and researcher. Interactive installations and objects that combine sound, electronics and the reuse of discarded materials.">
 <link rel="canonical" href="https://www.barbachan.com.br/">
-<link rel="stylesheet" href="assets/style.css?v=3">
+<link rel="alternate" hreflang="en" href="https://www.barbachan.com.br/">
+<link rel="alternate" hreflang="pt" href="https://www.barbachan.com.br/pt/">
+<link rel="alternate" hreflang="es" href="https://www.barbachan.com.br/es/">
+<link rel="alternate" hreflang="x-default" href="https://www.barbachan.com.br/">
+<link rel="stylesheet" href="/assets/style.css?v=5">
 </head>
 <body>
 
 <div class="wordmark">
   <img src="https://framerusercontent.com/images/6Cj1wSUdJOKiF93bx6356RaeHk.png" alt="André Barbachan">
-  <div class="tagline">Artista visual, músico e pesquisador</div>
+  <div class="tagline">Visual artist, musician and researcher</div>
 </div>
 
 <nav class="nav">
-  <a href="./" aria-current="page">Início</a>
-  <a href="musica/">Música</a>
-  <a href="artes-visuais/">Artes Visuais</a>
-  <a href="escritos/">Escritos</a>
-  <a href="sobre/">Sobre</a>
-  <a href="contato/">Contato</a>
+  <a href="/" aria-current="page">Home</a>
+  <a href="/musica/">Music</a>
+  <a href="/artes-visuais/">Visual Arts</a>
+  <a href="/escritos/">Writings</a>
+  <a href="/sobre/">About</a>
+  <a href="/contato/">Contact</a>
   <a href="https://www.ateliemaker.com" target="_blank" rel="noreferrer">Ateliê MAKER</a>
 </nav>
+<div class="idiomas"><a href="/" hreflang="en" lang="en" aria-current="true">EN</a><span aria-hidden="true">·</span><a href="/pt/" hreflang="pt" lang="pt">PT</a><span aria-hidden="true">·</span><a href="/es/" hreflang="es" lang="es">ES</a></div>
 
 <div class="hero hero--home carrossel" id="carrossel">
   <div class="carrossel__trilho" id="trilho">
 
-    <a class="carrossel__slide" href="musica/" style="background-image:url(https://framerusercontent.com/images/oVGlARkUuzF1YPmc9q2HBHoLG4.jpg)">
+    <a class="carrossel__slide" href="/musica/" style="background-image:url(https://framerusercontent.com/images/oVGlARkUuzF1YPmc9q2HBHoLG4.jpg)">
       <div class="hero__veu"></div>
       <div class="hero__texto">
-        <div class="hero__tag">Já disponível nas plataformas digitais</div>
+        <div class="hero__tag">Now available on all streaming platforms</div>
         <div class="hero__titulo">Milonga Lo-fi</div>
-        <div class="hero__desc">Álbum que funde a milonga tradicional gaúcha ao lo-fi contemporâneo, gravado ao ar livre em Herval no inverno de 2022. Nove faixas, distribuição Ditto Music.</div>
-        <span class="hero__cta">Ouvir e saber mais</span>
+        <div class="hero__desc">An album that blends traditional gaucho milonga with contemporary lo-fi, recorded outdoors in Herval in the winter of 2022. Nine tracks, distributed by Ditto Music.</div>
+        <span class="hero__cta">Listen and learn more</span>
       </div>
     </a>
 
-    <a class="carrossel__slide" href="artes-visuais/" style="background-image:url(https://framerusercontent.com/images/beMwL4rNGbiwkldLwVzkGfJkjlY.jpg)">
+    <a class="carrossel__slide" href="/artes-visuais/" style="background-image:url(https://framerusercontent.com/images/beMwL4rNGbiwkldLwVzkGfJkjlY.jpg)">
       <div class="hero__veu"></div>
       <div class="hero__texto">
-        <div class="hero__tag">Em exposição · MAC/RS · até 20 nov. 2026</div>
+        <div class="hero__tag">On view · MAC/RS · until 20 Nov 2026</div>
         <div class="hero__titulo">Antes naquele lugar eu. Nós aqui.</div>
-        <div class="hero__desc">A obra de 2011 está em exposição até 20 de novembro, no 5º andar da Casa de Cultura Mario Quintana, dentro da mostra Acervo em Foco: Paisagem Sonora.</div>
-        <span class="hero__cta">Ver a obra</span>
+        <div class="hero__desc">The 2011 work is on view until 20 November on the 5th floor of the Casa de Cultura Mario Quintana, in the exhibition Acervo em Foco: Paisagem Sonora.</div>
+        <span class="hero__cta">See the work</span>
       </div>
     </a>
 
   </div>
 
-  <button class="seta seta--esq" id="anterior" aria-label="Anterior">&lsaquo;</button>
-  <button class="seta seta--dir" id="proximo" aria-label="Próximo">&rsaquo;</button>
+  <button class="seta seta--esq" id="anterior" aria-label="Previous">&lsaquo;</button>
+  <button class="seta seta--dir" id="proximo" aria-label="Next">&rsaquo;</button>
 
   <div class="pontos" id="pontos" role="tablist">
-    <button class="ponto" role="tab" aria-selected="true" aria-label="Ir para destaque 1"></button>
-    <button class="ponto" role="tab" aria-selected="false" aria-label="Ir para destaque 2"></button>
+    <button class="ponto" role="tab" aria-selected="true" aria-label="Go to highlight 1"></button>
+    <button class="ponto" role="tab" aria-selected="false" aria-label="Go to highlight 2"></button>
   </div>
 </div>
 
