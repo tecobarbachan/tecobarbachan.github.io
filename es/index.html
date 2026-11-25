@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>André Barbachan — Artista visual, músico e investigador</title>
+<meta name="description" content="Sitio web de André Barbachan — artista visual, músico e investigador. Instalaciones y objetos interactivos que cruzan sonido, electrónica y reutilización de materiales descartados.">
+<link rel="canonical" href="https://www.barbachan.com.br/es/">
+<link rel="alternate" hreflang="en" href="https://www.barbachan.com.br/">
+<link rel="alternate" hreflang="pt" href="https://www.barbachan.com.br/pt/">
+<link rel="alternate" hreflang="es" href="https://www.barbachan.com.br/es/">
+<link rel="alternate" hreflang="x-default" href="https://www.barbachan.com.br/">
+<link rel="stylesheet" href="/assets/style.css?v=5">
+</head>
+<body>
+
+<div class="wordmark">
+  <img src="https://framerusercontent.com/images/6Cj1wSUdJOKiF93bx6356RaeHk.png" alt="André Barbachan">
+  <div class="tagline">Artista visual, músico e investigador</div>
+</div>
+
+<nav class="nav">
+  <a href="/es/" aria-current="page">Inicio</a>
+  <a href="/es/musica/">Música</a>
+  <a href="/es/artes-visuais/">Artes Visuales</a>
+  <a href="/es/escritos/">Escritos</a>
+  <a href="/es/sobre/">Sobre mí</a>
+  <a href="/es/contato/">Contacto</a>
+  <a href="https://www.ateliemaker.com" target="_blank" rel="noreferrer">Ateliê MAKER</a>
+</nav>
+<div class="idiomas"><a href="/" hreflang="en" lang="en">EN</a><span aria-hidden="true">·</span><a href="/pt/" hreflang="pt" lang="pt">PT</a><span aria-hidden="true">·</span><a href="/es/" hreflang="es" lang="es" aria-current="true">ES</a></div>
+
+<div class="hero hero--home carrossel" id="carrossel">
+  <div class="carrossel__trilho" id="trilho">
+
+    <a class="carrossel__slide" href="/es/musica/" style="background-image:url(https://framerusercontent.com/images/oVGlARkUuzF1YPmc9q2HBHoLG4.jpg)">
+      <div class="hero__veu"></div>
+      <div class="hero__texto">
+        <div class="hero__tag">Ya disponible en las plataformas digitales</div>
+        <div class="hero__titulo">Milonga Lo-fi</div>
+        <div class="hero__desc">Álbum que funde la milonga tradicional gaucha con el lo-fi contemporáneo, grabado al aire libre en Herval en el invierno de 2022. Nueve temas, distribución Ditto Music.</div>
+        <span class="hero__cta">Escuchar y saber más</span>
+      </div>
+    </a>
+
+    <a class="carrossel__slide" href="/es/artes-visuais/" style="background-image:url(https://framerusercontent.com/images/beMwL4rNGbiwkldLwVzkGfJkjlY.jpg)">
+      <div class="hero__veu"></div>
+      <div class="hero__texto">
+        <div class="hero__tag">En exposición · MAC/RS · hasta el 20 nov. 2026</div>
+        <div class="hero__titulo">Antes naquele lugar eu. Nós aqui.</div>
+        <div class="hero__desc">La obra de 2011 está en exposición hasta el 20 de noviembre, en la 5.ª planta de la Casa de Cultura Mario Quintana, en la muestra Acervo em Foco: Paisagem Sonora.</div>
+        <span class="hero__cta">Ver la obra</span>
+      </div>
+    </a>
+
+  </div>
+
+  <button class="seta seta--esq" id="anterior" aria-label="Anterior">&lsaquo;</button>
+  <button class="seta seta--dir" id="proximo" aria-label="Siguiente">&rsaquo;</button>
+
+  <div class="pontos" id="pontos" role="tablist">
+    <button class="ponto" role="tab" aria-selected="true" aria-label="Ir al destacado 1"></button>
+    <button class="ponto" role="tab" aria-selected="false" aria-label="Ir al destacado 2"></button>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="copyright">© <span id="ano">2026</span> André Barbachan</div>
+</footer>
+
+<script>
+  document.getElementById("ano").textContent = new Date().getFullYear();
+
+  (function () {
+    var trilho = document.getElementById("trilho");
+    var pontos = Array.prototype.slice.call(document.querySelectorAll("#pontos .ponto"));
+    var total = trilho.children.length;
+    var atual = 0;
+    var timer;
+
+    function mostrar(i) {
+      atual = (i + total) % total;
+      trilho.style.transform = "translateX(-" + atual * 100 + "%)";
+      pontos.forEach(function (p, n) {
+        p.setAttribute("aria-selected", n === atual ? "true" : "false");
+      });
+    }
+
+    function reiniciar() {
+      clearInterval(timer);
+      timer = setInterval(function () { mostrar(atual + 1); }, 7000);
+    }
+
+    document.getElementById("anterior").addEventListener("click", function (e) {
+      e.preventDefault(); mostrar(atual - 1); reiniciar();
+    });
+    document.getElementById("proximo").addEventListener("click", function (e) {
+      e.preventDefault(); mostrar(atual + 1); reiniciar();
+    });
+    pontos.forEach(function (p, n) {
+      p.addEventListener("click", function (e) {
+        e.preventDefault(); mostrar(n); reiniciar();
+      });
+    });
+
+    reiniciar();
+  })();
+</script>
+
+</body>
+</html>
